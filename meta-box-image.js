@@ -21,6 +21,9 @@ jQuery(document).ready(function($){
 		// Sets up the media library frame
 		meta_image_frame = wp.media.frames.meta_image_frame = wp.media({
 			title: meta_image.title,
+			frame: 'select',
+			multiple: false,
+			className: 'my-custom-class-name',
 			button: { text:  meta_image.button },
 			library: { type: 'image' }
 		});
@@ -36,6 +39,6 @@ jQuery(document).ready(function($){
 		});
 
 		// Opens the media library frame.
-		wp.media.editor.open();
+		meta_image_frame.open();
 	});
 });
